@@ -462,7 +462,11 @@ public class TypeBlockManager {
             return;
         }
         WorkspaceWidget widget = null;
-        Iterable<WorkspaceWidget> widgets = null;
+        
+        //TODO:  Remove unused widgets
+        @SuppressWarnings("unused")
+		Iterable<WorkspaceWidget> widgets = null;
+        
         Point spot = null;
         if (invalidBlockID(focusManager.getFocusBlockID())) {
             //canvas has focus

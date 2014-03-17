@@ -13,9 +13,8 @@ import java.io.StringReader;
 import java.io.StringWriter;
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.MissingResourceException;
-import java.util.ResourceBundle;
 import java.util.List;
+import java.util.ResourceBundle;
 
 import javax.swing.AbstractAction;
 import javax.swing.JButton;
@@ -38,20 +37,19 @@ import javax.xml.transform.stream.StreamResult;
 import javax.xml.validation.Schema;
 import javax.xml.validation.SchemaFactory;
 import javax.xml.validation.Validator;
-
-import javax.xml.xpath.XPathFactory;
 import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpression;
 import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathFactory;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
+import org.xml.sax.EntityResolver;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
-import org.xml.sax.EntityResolver;
 
 import edu.mit.blocks.codeblocks.BlockConnectorShape;
 import edu.mit.blocks.codeblocks.BlockGenus;
@@ -226,12 +224,13 @@ public class WorkspaceController {
 					}
 				}
 				
-				NodeList arg_descs = elm.getElementsByTagName("arg-description");
-				for (int j = 0 ; j < arg_descs.getLength(); j++) {
-					Element arg_desc = (Element)arg_descs.item(j);
-					String arg_name = arg_desc.getAttribute("name");
-					// System.out.println("bg." + name + ".arg_desc." + arg_name);
-	        	}
+				//TODO:  Remove debugging code, or make it "switch optional"
+//				NodeList arg_descs = elm.getElementsByTagName("arg-description");
+//				for (int j = 0 ; j < arg_descs.getLength(); j++) {
+//					Element arg_desc = (Element)arg_descs.item(j);
+//					String arg_name = arg_desc.getAttribute("name");
+//					 System.out.println("bg." + name + ".arg_desc." + arg_name);
+//	        	}
         	}
         	nodes = doc.getElementsByTagName("BlockDrawer");
         	for (int i = 0 ; i < nodes.getLength(); i++) {

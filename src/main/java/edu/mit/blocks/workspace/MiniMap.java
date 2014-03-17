@@ -504,8 +504,10 @@ public class MiniMap extends JPanel implements WorkspaceWidget, MouseListener, M
             timer.start();
         }
 
+        //TODO:  Remove unused stop()
         /**stops internal Timer*/
-        public void stop() {
+        @SuppressWarnings("unused")
+		public void stop() {
             timer.stop();
         }
 

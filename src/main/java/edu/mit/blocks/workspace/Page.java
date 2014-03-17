@@ -833,8 +833,12 @@ public class Page implements WorkspaceWidget, SearchableContainer, ISupportMemen
         public String id;
         public int width;
         public Color color;
-        public boolean fullview;
-        public Map<Long, Object> blocks = new HashMap<Long, Object>();
+        //TODO:  Remove unused fullview
+        @SuppressWarnings("unused")
+		public boolean fullview;
+        //TODO:  Remove unused blocks
+        @SuppressWarnings("unused")
+		public Map<Long, Object> blocks = new HashMap<Long, Object>();
         public Map<Long, Object> renderableBlocks = new HashMap<Long, Object>();
     }
 
@@ -1075,6 +1079,8 @@ public class Page implements WorkspaceWidget, SearchableContainer, ISupportMemen
             }
         }
 
+        //TODO:  Remove unused mouseDragged()
+        @SuppressWarnings("unused")
         public void mouseDragged(MouseEvent e) {
         }
 
@@ -1086,6 +1092,8 @@ public class Page implements WorkspaceWidget, SearchableContainer, ISupportMemen
             }
         }
 
+        //TODO:  Remove unused mouseMoved()
+        @SuppressWarnings("unused")
         public void mouseMoved(MouseEvent e) {
         }
 

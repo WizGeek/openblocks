@@ -20,7 +20,13 @@ import javax.swing.JLayeredPane;
  */
 public abstract class CScrollPane extends JLayeredPane implements MouseWheelListener, KeyListener {
 
-    public enum ScrollPolicy {
+    /**
+	 * 
+	 */
+	//TODO:  Add serialization logic if needed
+	private static final long serialVersionUID = 1L;
+
+	public enum ScrollPolicy {
 
         HORIZONTAL_BAR_ALWAYS,
         HORIZONTAL_BAR_NEVER,

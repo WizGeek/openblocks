@@ -104,7 +104,7 @@ public class BlockStub extends Block {
             if (parent.getSocketAt(0).getBlockID() != Block.NULL || parent.getNumSockets() > 1) {
                 //retrieve sockets from parent and set sockets accordingly
                 Iterator<BlockConnector> sockets = parent.getSockets().iterator();
-                for (int i = 0; sockets.hasNext(); i++) {
+                while (sockets.hasNext()) {
                     BlockConnector socket = sockets.next();
                     //socket labels should correspond with the socket blocks of parent
                     if (socket.getBlockID() != Block.NULL) {

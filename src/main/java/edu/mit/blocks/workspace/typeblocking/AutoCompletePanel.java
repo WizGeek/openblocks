@@ -57,7 +57,7 @@ public class AutoCompletePanel extends JPanel implements MouseListener, MouseMot
     /**editable text field for user to enter in desired pattern**/
     private final JTextField editor;
     /**menu that displays set of possibilities from user-input patter**/
-    private final JList menu;
+    private final JList<Object> menu;
     /** The workspace in use */
     private final Workspace workspace;
 
@@ -75,7 +75,7 @@ public class AutoCompletePanel extends JPanel implements MouseListener, MouseMot
 
 
         //Set up menu (JList)
-        menu = new JList();
+        menu = new JList<Object>();
         menu.setFont(font);
         menu.setBackground(BACKGROUND);
         menu.setLayoutOrientation(JList.VERTICAL);
@@ -232,7 +232,7 @@ public class AutoCompletePanel extends JPanel implements MouseListener, MouseMot
             }
         }
         //update menu and repaint
-        menu.setModel(new DefaultComboBoxModel(matchingBlocks.toArray()));
+        menu.setModel(new DefaultComboBoxModel<Object>(matchingBlocks.toArray()));
         this.revalidate();
         this.repaint();
 

@@ -341,7 +341,13 @@ public class CSliderPane extends JPanel implements ComponentListener {
      */
     private abstract class CNumberTextField extends JTextField implements KeyListener, FocusListener, MouseListener {
 
-        private final int[] validKeyCodes = {KeyEvent.VK_BACK_SPACE,
+        /**
+		 * 
+		 */
+    	//TODO: Add serialization code if necessary
+		private static final long serialVersionUID = 1L;
+		
+		private final int[] validKeyCodes = {KeyEvent.VK_BACK_SPACE,
             KeyEvent.VK_UP, KeyEvent.VK_DOWN, KeyEvent.VK_LEFT,
             KeyEvent.VK_RIGHT, KeyEvent.VK_END, KeyEvent.VK_HOME};
         //private final char[] validKeyChar = {'.', '-'};
@@ -384,6 +390,8 @@ public class CSliderPane extends JPanel implements ComponentListener {
         public void mousePressed(MouseEvent e) {
         }
 
+        //TODO:  Remove unused mouseDragged()?
+        @SuppressWarnings("unused")
         public void mouseDragged(MouseEvent e) {
         }
 
@@ -391,6 +399,8 @@ public class CSliderPane extends JPanel implements ComponentListener {
         public void mouseReleased(MouseEvent e) {
         }
 
+        //TODO:  Remove unused mouseMoved()?
+        @SuppressWarnings("unused")
         public void mouseMoved(MouseEvent e) {
         }
         //revaluate text widget abstract model and GUI displays

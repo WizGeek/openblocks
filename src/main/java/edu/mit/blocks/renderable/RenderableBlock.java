@@ -74,10 +74,12 @@ public class RenderableBlock extends JComponent implements SearchableElement,
 	/** True if in debug mode */
 	private static final boolean DEBUG = false;
 
+	//TODO:  Remove unused constant
 	/**
 	 * The maximum distance between blocks that are still considered nearby
 	 * enough to link
 	 */
+	@SuppressWarnings("unused")
 	private static final double NEARBY_RADIUS = 20.0;
 
 	/** The alpha level while dragging - lower means more transparent */
@@ -1627,7 +1629,10 @@ public class RenderableBlock extends JComponent implements SearchableElement,
     	Block newBlock = new Block(workspace, rb.getGenus(), rb.blockLabel.getText());
     	RenderableBlock newRb = new RenderableBlock(workspace, parent, newBlock.getBlockID(), false);
     	
-    	int i = 0;
+    	//TODO:  Remove unused variable "i"
+    	@SuppressWarnings("unused")
+		int i = 0;
+    	
     	Iterable<BlockConnector> oriSockets = oriBlock.getSockets();
     	Iterator<BlockConnector> newSockets = newBlock.getSockets().iterator();
     	
@@ -2292,16 +2297,17 @@ public class RenderableBlock extends JComponent implements SearchableElement,
 		return (int) (x / zoom);
 	}
 
-	/**
-	 * returns the descaled x based on the current zoom that is given a scaled x
-	 * it returns what that position would be when zoom == 1
-	 * 
-	 * @param x
-	 * @return
-	 */
-	private int descale(double x) {
-		return (int) (x / zoom);
-	}
+	//TODO:  Remove descale()
+//	/**
+//	 * returns the descaled x based on the current zoom that is given a scaled x
+//	 * it returns what that position would be when zoom == 1
+//	 * 
+//	 * @param x
+//	 * @return
+//	 */
+//	private int descale(double x) {
+//		return (int) (x / zoom);
+//	}
 
 	/**
 	 * calculates the x when the zoom is 1.0

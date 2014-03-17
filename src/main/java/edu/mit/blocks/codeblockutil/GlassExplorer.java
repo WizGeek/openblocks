@@ -50,12 +50,19 @@ public class GlassExplorer extends JPanel implements Explorer, FocusListener {
     private int selectedCanvasIndex;
     /** The default index signifying no canvases have been selected */
     private static final int DEFAULT_INDEX = 1000;
+
+    //TODO:  Remove unused constant
     /** The width of the canvas panel */
-    private static final int SELECTED_CANVAS_WIDTH = 225;
+    @SuppressWarnings("unused")
+	private static final int SELECTED_CANVAS_WIDTH = 225;
+    
     /** A List of listeners for this canvas */
     private List<ExplorerListener> listeners;
+    
+    //TODO:  Remove unused workspace
     /** The workspace in use */
-    private final Workspace workspace;
+    @SuppressWarnings("unused")
+	private final Workspace workspace;
 
     /**
      * Constructor

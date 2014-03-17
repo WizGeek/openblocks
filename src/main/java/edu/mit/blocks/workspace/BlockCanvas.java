@@ -29,7 +29,6 @@ import edu.mit.blocks.codeblockutil.CHoverScrollPane;
 import edu.mit.blocks.codeblockutil.CScrollPane;
 import edu.mit.blocks.codeblockutil.CScrollPane.ScrollPolicy;
 import edu.mit.blocks.renderable.RenderableBlock;
-import org.w3c.dom.NodeList;
 
 /**
  * A BlockCanvas is a container of Pages and is a scrollable
@@ -48,8 +47,9 @@ import org.w3c.dom.NodeList;
  */
 public class BlockCanvas implements PageChangeListener, ISupportMemento {
 
-    /** serial version ID */
-    private static final long serialVersionUID = 7458721329L;
+	//TODO:  Remove unused serialVersionUID
+    ///** serial version ID */
+    //private static final long serialVersionUID = 7458721329L;
     /** the collection of pages that this BlockCanvas stores */
     private List<Page> pages = new ArrayList<Page>();
     /** the collection of PageDivideres that this BlockCanvas stores */

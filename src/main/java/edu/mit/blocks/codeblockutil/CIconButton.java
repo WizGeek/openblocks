@@ -44,7 +44,8 @@ public class CIconButton extends CButton {
      * @effects constructs this with particular icon, a black background,
      * 			and a blue selected coloring.
      */
-    public CIconButton(Icon icon) {
+	@SuppressWarnings("unused")
+	public CIconButton(Icon icon) {
         super(Color.black, Color.blue, null);
         this.icon = icon;
         super.setPreferredSize(new Dimension(40, 40));
@@ -63,6 +64,7 @@ public class CIconButton extends CButton {
      *  @param selectedColor the color of the background when the button is pressed
      *  @param icon the CIconButton.Icon for this button
      */
+	@SuppressWarnings("unused")
     public CIconButton(Color backColor, Color selectedColor, Icon icon) {
         super(backColor, selectedColor, null);
         this.icon = icon;
